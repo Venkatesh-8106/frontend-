@@ -14,9 +14,9 @@ function Brand() {
 
 function WorkspaceNav({ view, setView, isAdmin }) {
   return <nav className="flex w-full flex-col gap-2" aria-label="Workspace navigation">
-    <Button variant={view === 'admin' ? 'primary' : 'ghost'} size="sm" onClick={() => setView('admin')} className="w-full justify-start"><BarChart3 size={15} />Overview</Button>
-    {isAdmin && <Button variant={view === 'users' ? 'primary' : 'ghost'} size="sm" onClick={() => setView('users')} className="w-full justify-start"><UsersRound size={15} />Users</Button>}
-    {!isAdmin && <Button variant={view === 'requests' ? 'primary' : 'ghost'} size="sm" onClick={() => setView('requests')} className="w-full justify-start"><ClipboardCheck size={15} />My requests</Button>}
+    {!isAdmin && <Button variant={view === 'requests' ? 'primary' : 'ghost'} size="sm" onClick={() => setView('requests')} className="h-8 w-full justify-start px-2.5 text-xs"><ClipboardCheck size={14} />My requests</Button>}
+    <Button variant={view === 'admin' ? 'primary' : 'ghost'} size="sm" onClick={() => setView('admin')} className="h-8 w-full justify-start px-2.5 text-xs"><BarChart3 size={14} />Overview</Button>
+    {isAdmin && <Button variant={view === 'users' ? 'primary' : 'ghost'} size="sm" onClick={() => setView('users')} className="h-8 w-full justify-start px-2.5 text-xs"><UsersRound size={14} />Users</Button>}
   </nav>
 }
 

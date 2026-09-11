@@ -13,7 +13,7 @@ function Brand() {
 }
 
 function WorkspaceNav({ view, setView, isAdmin }) {
-  return <nav className="flex gap-1 overflow-x-auto lg:flex-col lg:gap-2" aria-label="Workspace navigation">
+  return <nav className="flex flex-col gap-2" aria-label="Workspace navigation">
     <Button variant={view === 'admin' ? 'primary' : 'ghost'} size="sm" onClick={() => setView('admin')} className="shrink-0 justify-start"><BarChart3 size={15} />Overview</Button>
     {isAdmin && <Button variant={view === 'users' ? 'primary' : 'ghost'} size="sm" onClick={() => setView('users')} className="shrink-0 justify-start"><UsersRound size={15} />Users</Button>}
     {!isAdmin && <Button variant={view === 'requests' ? 'primary' : 'ghost'} size="sm" onClick={() => setView('requests')} className="shrink-0 justify-start"><ClipboardCheck size={15} />My requests</Button>}

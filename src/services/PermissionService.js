@@ -3,8 +3,8 @@ const USE_DEMO_FALLBACK = import.meta.env.DEV && !import.meta.env.VITE_API_BASE_
 const TOKEN_KEY = 'campuspass_token'
 
 const demoTypes = [
-  { id: 'leave', name: 'Leave campus', description: 'Request permission to leave campus during academic hours.' },
-  { id: 'event', name: 'Event participation', description: 'Attend an approved academic or cultural event.' },
+  { id: 'leave', name: 'Outpass', description: 'Request an outpass to leave campus during academic hours.' },
+  { id: 'event', name: 'Event permission', description: 'Attend an approved academic or cultural event with permission.' },
   { id: 'late', name: 'Late arrival', description: 'Share details for an expected late arrival.' },
   { id: 'internship', name: 'Internship', description: 'Request permission for an internship, placement, or off-campus training.' },
 ]

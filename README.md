@@ -21,6 +21,8 @@ VITE_API_BASE_URL=https://your-api.example.com/api
 
 When unset, requests use `/api`, which works with a same-origin proxy or backend.
 
+During local Vite development, if no API base URL is configured and `/api` returns `404`, the app uses a small local demo store so the auth and user-edit flows can be previewed without a backend. Set `VITE_API_BASE_URL` to disable this fallback and use your real API.
+
 `AuthService.js` stores the JWT under `campuspass_token` and the returned user under `campuspass_user` in localStorage. For production deployments, prefer an httpOnly, secure, same-site cookie by moving token persistence to the backend session layer.
 
 ## API contracts

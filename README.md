@@ -34,6 +34,7 @@ Workspace tabs use a 46px minimum height, `px-5 py-2` spacing, `gap-x-2` icon al
 - `POST /auth/login` accepts `{ email, password }` and returns `{ token, user: { id, name, role } }`.
 - Faculty login also sends `{ role: "Faculty", facultyId }` and requires a Faculty ID in the login form.
 - `POST /auth/register` accepts `{ name, email, password, role, college, department, section }`.
+- Faculty registration also includes the required `facultyId` field when `role` is `Faculty`.
 - `PUT /admin/users/:id` accepts `{ email, phone }` and requires `Authorization: Bearer <token>`.
 
 ## Git workflow

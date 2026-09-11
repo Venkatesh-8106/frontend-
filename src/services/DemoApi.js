@@ -23,7 +23,8 @@ export const demoApi = {
     return { success: true, data: { user } }
   },
   login(credentials) {
-    const user = getUsers().find((item) => item.email.toLowerCase() === credentials.email.toLowerCase()) || { id: 'usr-demo', name: 'Demo Administrator', email: credentials.email, role: 'Admin' }
+    const requestedRole = credentials.email.toLowerCase().startsWith('admin') ? 'Admin' : 'Student'
+    const user = getUsers().find((item) => item.email.toLowerCase() === credentials.email.toLowerCase()) || { id: 'usr-demo', name: requestedRole === 'Admin' ? 'Demo Administrator' : 'Demo Student', email: credentials.email, role: requestedRole }
     return { token: 'demo-token', user }
   },
   updateUser(id, details) {

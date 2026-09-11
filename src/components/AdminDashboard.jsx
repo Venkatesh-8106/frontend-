@@ -15,7 +15,7 @@ function ConfigTable({ title, items, onAdd, onDelete }) { return <div className=
 export default function AdminDashboard() {
   const [config, setConfig] = useState(initialConfig)
   const [activeTab, setActiveTab] = useState('Overview')
-  const tabs = ['Overview', 'Academic structure', 'Authorities & workflows']
+  const tabs = ['Overview']
   const averagePending = useMemo(() => departments.reduce((total, item) => total + item.pending, 0) / departments.length, [])
   function addItem(title) { const value = window.prompt(`Add ${title.slice(0, -1)}`); if (value?.trim()) setConfig((current) => ({ ...current, [title]: [...current[title], value.trim()] })) }
   function deleteItem(title, item) { setConfig((current) => ({ ...current, [title]: current[title].filter((value) => value !== item) })) }

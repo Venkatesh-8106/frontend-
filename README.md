@@ -25,6 +25,10 @@ During local Vite development, if no API base URL is configured and `/api` retur
 
 `AuthService.js` stores the JWT under `campuspass_token` and the returned user under `campuspass_user` in localStorage. For production deployments, prefer an httpOnly, secure, same-site cookie by moving token persistence to the backend session layer.
 
+## Tab styling tokens
+
+Workspace tabs use a 46px minimum height, `px-5 py-2` spacing, `gap-x-2` icon alignment, and `rounded-lg` corners. Active tabs use the `teal` brand token with white bold text; inactive tabs use muted ink with a subtle teal hover background. Desktop tabs sit in the left rail and stack vertically; mobile tabs remain full-width and stacked.
+
 ## API contracts
 
 - `POST /auth/login` accepts `{ email, password }` and returns `{ token, user: { id, name, role } }`.

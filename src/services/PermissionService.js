@@ -18,7 +18,6 @@ const demoFields = {
   event: [
     { id: 'eventName', label: 'Event name', type: 'text', required: true, placeholder: 'e.g. Inter-college hackathon' },
     { id: 'eventDate', label: 'Event date', type: 'date', required: true },
-    { id: 'transport', label: 'Transport', type: 'select', required: true, options: ['College bus', 'Personal vehicle', 'Public transport'] },
   ],
   late: [
     { id: 'arrivalDate', label: 'Arrival date', type: 'date', required: true },

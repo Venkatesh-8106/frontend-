@@ -7,3 +7,7 @@
 * { box-sizing: border-box; }
 body { margin: 0; min-width: 320px; }
 button, input { font: inherit; }
+
+@media (min-width: 1024px) {
+	.workspace-sidebar { width: 13rem; flex: 0 0 13rem; }
+}

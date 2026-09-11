@@ -14,9 +14,9 @@ function Brand() {
 
 function WorkspaceNav({ view, setView, isAdmin }) {
   return <nav className="flex w-full flex-col gap-0.5" aria-label="Workspace navigation">
-    {!isAdmin && <Button variant={view === 'requests' ? 'primary' : 'ghost'} size="sm" onClick={() => setView('requests')} className="h-6 w-full justify-start gap-1.5 px-1.5 text-[10px]"><ClipboardCheck size={12} />My requests</Button>}
-    <Button variant={view === 'admin' ? 'primary' : 'ghost'} size="sm" onClick={() => setView('admin')} className="h-6 w-full justify-start gap-1.5 px-1.5 text-[10px]"><BarChart3 size={12} />Overview</Button>
-    {isAdmin && <Button variant={view === 'users' ? 'primary' : 'ghost'} size="sm" onClick={() => setView('users')} className="h-6 w-full justify-start gap-1.5 px-1.5 text-[10px]"><UsersRound size={12} />Users</Button>}
+    {!isAdmin && <Button variant={view === 'requests' ? 'primary' : 'ghost'} size="sm" onClick={() => setView('requests')} className="h-6 w-full justify-start gap-1.5 px-1.5 text-[10px]"><ClipboardCheck size={10} />My requests</Button>}
+    <Button variant={view === 'admin' ? 'primary' : 'ghost'} size="sm" onClick={() => setView('admin')} className="h-6 w-full justify-start gap-1.5 px-1.5 text-[10px]"><BarChart3 size={10} />Overview</Button>
+    {isAdmin && <Button variant={view === 'users' ? 'primary' : 'ghost'} size="sm" onClick={() => setView('users')} className="h-6 w-full justify-start gap-1.5 px-1.5 text-[10px]"><UsersRound size={10} />Users</Button>}
   </nav>
 }
 

@@ -24,7 +24,7 @@ export const demoApi = {
   },
   login(credentials) {
     const requestedRole = credentials.email.toLowerCase().startsWith('admin') ? 'Admin' : 'Student'
-    const user = getUsers().find((item) => item.email.toLowerCase() === credentials.email.toLowerCase()) || { id: 'usr-demo', name: requestedRole === 'Admin' ? 'Demo Administrator' : 'Demo Student', email: credentials.email, role: requestedRole }
+    const user = getUsers().find((item) => item.email.toLowerCase() === credentials.email.toLowerCase()) || { id: 'usr-demo', name: requestedRole === 'Admin' ? 'Demo Administrator' : 'Demo Student', email: credentials.email, role: requestedRole, ...(requestedRole === 'Student' ? { rollNo: 'STU-2026-001' } : {}) }
     return { token: 'demo-token', user }
   },
   updateUser(id, details) {

@@ -6,6 +6,7 @@ const demoTypes = [
   { id: 'leave', name: 'Leave campus', description: 'Request permission to leave campus during academic hours.' },
   { id: 'event', name: 'Event participation', description: 'Attend an approved academic or cultural event.' },
   { id: 'late', name: 'Late arrival', description: 'Share details for an expected late arrival.' },
+  { id: 'internship', name: 'Internship', description: 'Request permission for an internship, placement, or off-campus training.' },
 ]
 const demoFields = {
   leave: [
@@ -23,6 +24,13 @@ const demoFields = {
     { id: 'arrivalDate', label: 'Arrival date', type: 'date', required: true },
     { id: 'arrivalTime', label: 'Expected arrival time', type: 'text', required: true, placeholder: 'e.g. 9:30 PM' },
     { id: 'reason', label: 'Reason', type: 'text', required: true, placeholder: 'Why will you arrive late?' },
+  ],
+  internship: [
+    { id: 'companyName', label: 'Company / organization', type: 'text', required: true, placeholder: 'e.g. Northbridge Labs' },
+    { id: 'internshipRole', label: 'Internship role', type: 'text', required: true, placeholder: 'e.g. Software engineering intern' },
+    { id: 'startDate', label: 'Start date', type: 'date', required: true },
+    { id: 'endDate', label: 'End date', type: 'date', required: true },
+    { id: 'offerLetter', label: 'Offer letter', type: 'file', required: false },
   ],
 }
 
